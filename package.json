@@ -16,10 +16,15 @@
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
-    "jest": "^18.1.0"
+    "jest": "^18.1.0",
+    "rimraf": "^2.5.4"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clean": "rimraf ./node_modules ./lib/* && npm i",
+    "build": "babel modules -d lib --ignore .test.js",
+    "prepare": "npm run clean && npm t && npm run build",
+    "publish": "npm run prepare && npm publish"
   },
   "repository": {
     "type": "git",
