@@ -1,6 +1,6 @@
 {
   "name": "gest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Expect extensions for Jest",
   "main": "lib/index.js",
   "dependencies": {
