@@ -24,7 +24,7 @@
     "clean": "rimraf ./lib/*",
     "build": "babel modules -d lib --ignore .test.js",
     "prepare": "npm run clean && npm t && npm run build",
-    "publish": "npm run prepare && npm publish"
+    "prepublish": "npm run prepare"
   },
   "repository": {
     "type": "git",
