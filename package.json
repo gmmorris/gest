@@ -1,0 +1,34 @@
+{
+  "name": "gest",
+  "version": "1.0.0",
+  "description": "Expect extensions for Jest",
+  "main": "lib/index.js",
+  "dependencies": {
+    "jest-diff": "^18.1.0",
+    "lodash.isobjectlike": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-es2015": "^6.18.0",
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "jest": "^18.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmmorris/gest.git"
+  },
+  "author": "Gidi Meir Morris <gidi@gidi.io> (http://www.gidi.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmmorris/gest/issues"
+  },
+  "homepage": "https://github.com/gmmorris/gest#readme"
+}
