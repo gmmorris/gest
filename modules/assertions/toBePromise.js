@@ -9,7 +9,7 @@ function printDiff (diffString) {
   return diffString ? `
   
   Difference:
-    ${diffString}
+${diffString}
   ` : ``
 }
 export function message (received, expected, pass) {
@@ -17,18 +17,18 @@ export function message (received, expected, pass) {
     ? () => `${this.utils.matcherHint('.not.toBe')}
     
     Expected value to not be a Promise:
-      Promise.resolve(${this.utils.printExpected(expected)}) === ${this.utils.printExpected(expected)}
+      Promise.resolve(${this.utils.printExpected(received)}) !== ${this.utils.printExpected(received)}
     Received:
-      ${this.utils.printReceived(received)}`
+      Promise.resolve(${this.utils.printExpected(received)}) === ${this.utils.printExpected(received)}`
     : () => {
-      const diffString = diff(expected, received, {
+      const diffString = diff(new Promise(() => received), received, {
         expand: this.expand
       })
 
       return `${this.utils.matcherHint('.toBe')}
           
-          Expected value to not be a Promise:
-            Promise.resolve(${this.utils.printExpected(expected)}) === ${this.utils.printExpected(expected)}
+          Expected value to be a Promise:
+            Promise.resolve(${this.utils.printExpected(received)}) === ${this.utils.printExpected(received)}
           Received:
             ${this.utils.printReceived(received)}
           ${printDiff(diffString)}`

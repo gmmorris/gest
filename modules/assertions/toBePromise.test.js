@@ -12,7 +12,7 @@ describe('toBePromise', () => {
     expect(new Promise(() => {})).toBePromise()
   })
 
-  it('toBePromise validatest the one argument is a promise', () => {
+  it('toBePromise v alidatest the one argument is a promise', () => {
     expect({}).not.toBePromise()
 
     expect(() => {
